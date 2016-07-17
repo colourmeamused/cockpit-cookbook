@@ -1,5 +1,5 @@
 case node['platform']
-when 'rhel'
+when 'redhat'
   rhsm_repo 'rhel-7-server-extras-rpms' do
     action :enable
   end
