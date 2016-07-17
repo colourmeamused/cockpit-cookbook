@@ -1,5 +1,13 @@
-#
-# Cookbook Name:: cockpit
-# Recipe:: default
-#
-# Copyright (c) 2016 The Authors, All Rights Reserved.
+
+
+case node['platform']
+when 'rhel'
+  rhsm_repo 'rhel-7-server-extras-rpms' do
+    action :enable
+  end
+
+  package 'cockpit'
+  firewalld_service 'cockpit'
+  service 'cockpit' do
+    action [:enable, :start]
+  end
