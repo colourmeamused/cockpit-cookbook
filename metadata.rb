@@ -1,0 +1,7 @@
+name 'cockpit'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures cockpit'
+long_description 'Installs/Configures cockpit'
+version '0.1.0'
