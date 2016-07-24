@@ -4,7 +4,7 @@ when 'redhat'
     action :enable
   end
   package 'cockpit'
-  firewalld_service 'cockpit'
+  firewalldconfig_service 'cockpit'
   service 'cockpit' do
     action [:enable, :start]
   end
