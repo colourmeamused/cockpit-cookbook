@@ -33,21 +33,25 @@ Place a dependency on the `cockpit` cookbook in your
 cookbook's metadata.rb:
 
 ```ruby
-depends 'cockpit', '~> 0.2.0'
+depends 'cockpit', '~> 0.3.0'
 ```
 
 Or include the default recipe in your run list as ``'recipe[cockpit]'``.
 
 
-This cookbook depends on the [firewalld cookbook](https://supermarket.chef.io/cookbooks/firewalld) and the [Red Hat Subscription Manager cookbook](https://supermarket.chef.io/cookbooks/redhat_subscription_manager).
+This cookbook depends on the [firewalld cookbook](https://supermarket.chef.io/cookbooks/firewalld), the [augeas cookbook](https://supermarket.chef.io/cookbooks/augeas) and the [Red Hat Subscription Manager cookbook](https://supermarket.chef.io/cookbooks/redhat_subscription_manager).
 
 Attributes
 ------------
 
-These attributes affect the way all of the LWRPs are behaving.
+These attributes can be used to customize the Cockpit install.
 
 * `node['cockpit']['port']` - Modify the listen port for Cockpit.  
    Defaults to 9090.
+* `node['cockpit']['logintitle']` - Set the LoginTitle attribute in cockpit.conf, which is shown on the login page.   
+* `node['cockpit']['features']['pcp']` - Install the PCP framework to allow Cockpit to store system metrics.
+* `node['cockpit']['features']['kubernetes']` - Install the [Kubernetes dashboard](http://cockpit-project.org/guide/latest/feature-kubernetes.html). At the moment this uses the CentOS 7 Extras repo to get the cockpit-kubernetes package.
+
 
 
 

@@ -12,4 +12,8 @@ suites:
   - name: default
     run_list:
       - recipe[cockpit::default]
-    attributes:
+    attributes: {"cockpit":{"logintitle":"cockpit-test"}}
+  - name: all_features
+    run_list:
+      - recipe[cockpit::features]
+    attributes: {"cockpit":{"logintitle":"cockpit-test","features":{"pcp":true,"kubernetes":true}}}
