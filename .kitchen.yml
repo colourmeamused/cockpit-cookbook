@@ -7,12 +7,12 @@ provisioner:
 
 platforms:
   - name: rhel-7.2
-
+  - name: centos-7.2
 suites:
   - name: default
     run_list:
       - recipe[cockpit::default]
-    attributes: {"cockpit":{"logintitle":"cockpit-test"}}
+    attributes: {"cockpit":{"logintitle":"cockpit-test","ssl_vault":"ssl","ssl_item":"cockpit"}}
   - name: all_features
     run_list:
       - recipe[cockpit::features]
