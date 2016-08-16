@@ -35,10 +35,10 @@ when 'redhat'
   end
   augeas 'set LoginTitle for Cockpit' do
     changes [
-             "set /files/etc/cockpit/cockpit.conf/WebService/LoginTitle #{node['cockpit']['logintitle']}"]
+      "set /files/etc/cockpit/cockpit.conf/WebService/LoginTitle #{node['cockpit']['logintitle']}"]
     lens    'Puppet.lns'
     incl    '/etc/cockpit/cockpit.conf'
-    only_if { node['cockpit']['logintitle']}
+    only_if { node['cockpit']['logintitle'] }
     notifies :restart, 'service[cockpit]', :delayed
   end
 end

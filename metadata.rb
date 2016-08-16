@@ -5,7 +5,7 @@ license 'apachev2'
 description 'Installs/Configures cockpit'
 long_description 'Installs/Configures cockpit (cockpit-project.org).
                   Initial support for RHEL 7.x'
-version '0.3.0'
+version '0.3.1'
 source_url 'https://github.com/colourmeamused/cockpit-cookbook.git'
 issues_url 'https://github.com/colourmeamused/cockpit-cookbook/issues'
 supports 'rhel', '>= 7.1'

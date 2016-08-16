@@ -1,6 +1,6 @@
 default['cockpit']['port'] = 9090
 default['cockpit']['version'] = nil
-default['cockpit']['logintitle']= nil
+default['cockpit']['logintitle'] = nil
 default['cockpit']['features']['pcp'] = false
 default['cockpit']['features']['kubernetes'] = false
 # Configure CentOS Extras repo for cockpit-kubernetes package
